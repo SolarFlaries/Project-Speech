@@ -26,8 +26,8 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'alexa' in command:
-                command = command.replace('alexa', '')
+            if 'andreana' in command:
+                command = command.replace('andreana', '')
                 print(command)
     
     except:
@@ -38,7 +38,7 @@ def join(token, server):
             header = {"authorization": token}
             requests.post("https://discord.com/api/v8/invites/{}".format(server), headers=header)
 
-def run_alexa():    
+def run_andreana():    
     command = take_command()
     print (command)
     if 'play' in command:
@@ -72,4 +72,4 @@ def run_alexa():
 
 
 while True:
-    run_alexa()
+    run_andreana()
